@@ -1,0 +1,12 @@
+  .moderated {
+    padding: 15px;
+    text-align: center;
+}
+
+.generalbox,.moderated_text, .moderated {
+    padding: 15px;
+}
+
+h2 {
+    padding: 15px;
+}

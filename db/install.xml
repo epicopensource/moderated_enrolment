@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="enrol/moderated/db" VERSION="2011112900" COMMENT="XMLDB file for Moodle enrol/moderated"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="enrol_moderated" COMMENT="Holds all info">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" UNSIGNED="true" SEQUENCE="true" NEXT="userid"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10"  SEQUENCE="false" PREVIOUS="id" NEXT="mentor"/>
+        <FIELD NAME="mentor" TYPE="int" LENGTH="10"  SEQUENCE="false" PREVIOUS="userid" NEXT="status"/>
+        <FIELD NAME="status" TYPE="char" LENGTH="15" SEQUENCE="false" PREVIOUS="mentor" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10"  SEQUENCE="false" PREVIOUS="status" NEXT="courseid"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" DEFAULT="0" SEQUENCE="false" PREVIOUS="timemodified"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
