@@ -26,7 +26,7 @@ $string['validemail'] = 'Please enter a valid email address';
 $string['enteremail_desc'] = 'Please enter the email address of your mentor in the field below.';
 $string['enteremail'] = 'Mentor email:';
 $string['notmentor'] = 'The email you supplied is not assigned to a mentor';
-$string['emailsent'] = 'An email has been sent to your menor. Once your request has been confirmed, you will be able to access the course.';
+$string['emailsent'] = 'An email has been sent to your Mentor. Once your request has been confirmed, you will be able to access the course.';
 $string['emailalreadysent'] = 'Email already sent';
 $string['confirmuser'] = 'Confirm request';
 $string['userconfirmenrol'] = 'Click the "Confirm" link below to assign {$a->sname} as your mentee and enrol on the {$a->name} course. Click "Cancel" to deny this request.';
@@ -82,4 +82,10 @@ $string['userenroled'] = 'User successfully enrolled. They will now be notified 
 $string['userenrolerror'] = 'There was an error while trying to assign this user as mentee or enrol them on to course.';
 $string['usercancelemailsent'] = 'Request declined. User will be notified via email.';
 $string['enrolinstancedefaults_desc'] = 'The moderated enrolment plugin has no settings to modify.';
+
+// Duncan Croucher - Added extra strings for more instruction information
+$string['enrolmentoptions'] = 'Enrol me in this Course';
+$string['moderatedinstructions'] = 'When you have submitted this form, your mentor will receive a notification asking them to approve or deny your enrolment request.';
+$string['moderatedinstructions2'] = 'Once your mentor has actioned this request, you will receive notification by email.';
+
 ?>

@@ -62,11 +62,11 @@ class enrol_moderated_form extends moodleform {
         $plugin = enrol_get_plugin('moderated');
 
         $heading = $plugin->get_instance_name($instance);
-		$description = get_string('enteremail_desc', 'enrol_moderated');
+	$description = get_string('enteremail_desc', 'enrol_moderated');
         $mform->addElement('html', '<h2 style="padding: 15px;">'.$heading.'</h2>');
-       	$mform->addElement('html', '<p style="padding: 0 0 0 15px;">'.get_string('enteremail_desc', 'enrol_moderated').'</p>');
+        $mform->addElement('html', '<p style="padding: 0 0 0 15px;">'.get_string('moderatedinstructions', 'enrol_moderated') . '</p><p style="padding: 0 0 0 15px;">' .get_string('moderatedinstructions2', 'enrol_moderated'). '</p>');
+        $mform->addElement('html', '<p style="padding: 0 0 0 15px;">'.get_string('enteremail_desc', 'enrol_moderated').'</p>');
         $mform->addElement('text', 'email', get_string('enteremail', 'enrol_moderated'));
-
         $this->add_action_buttons(false, get_string('submit', 'enrol_moderated'));
 
         $mform->addElement('hidden', 'id');

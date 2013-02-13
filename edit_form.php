@@ -22,7 +22,9 @@ class enrol_moderated_edit_form extends moodleform {
 
         $mform->addElement('header', 'header', get_string('pluginname', 'enrol_moderated'));
 
-        $mform->addElement('text', 'name', get_string('custominstancename', 'enrol'));
+        // duncan croucher - 10/01/13 - Commented out the below line as we don't want the user selecting their own name for the enrolment instance.
+        
+        //$mform->addElement('text', 'name', get_string('custominstancename', 'enrol'));
 
         $options = array(ENROL_INSTANCE_ENABLED  => get_string('yes'),
                          ENROL_INSTANCE_DISABLED => get_string('no'));
@@ -34,8 +36,12 @@ class enrol_moderated_edit_form extends moodleform {
         } else {
             $roles = get_default_enrol_roles($context, $plugin->get_config('roleid'));
         }
-        $mform->addElement('select', 'roleid', get_string('assignrole', 'enrol_moderated'), $roles);
-        $mform->setDefault('roleid', $plugin->get_config('roleid'));
+        
+        // duncan croucher - 10/01/13 - commented out the below as we don't won't the user to select a different role here. As plugin won't 
+        // function if anything but Mentor is selected.
+        
+        // $mform->addElement('select', 'roleid', get_string('assignrole', 'enrol_moderated'), $roles);
+       // $mform->setDefault('roleid', $plugin->get_config('roleid'));
 
 
         $mform->addElement('duration', 'enrolperiod', get_string('enrolperiod', 'enrol_moderated'), array('optional' => true, 'defaultunit' => 86400));
