@@ -26,7 +26,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2011112900;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2011112900;        // Requires this Moodle version
+$plugin->release = 1.0;
+$plugin->version   = 2012062500;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->requires  = 2012062500;        // Requires this Moodle version
 $plugin->component = 'enrol_moderated';      // Full name of the plugin (used for diagnostics)
 
